@@ -1,11 +1,17 @@
-function showMessage(message) {
+function showMessage(message: string): void {
   console.log(message);
 }
 
-function calc(num1, num2) {
+showMessage("hello");
+
+function calc(num1: number, num2: number) {
   return num1 + num2;
 }
 
-function customError() {
+calc(1, 2);
+
+function customError(): never {
   throw new Error("Error");
 }
+
+customError();
